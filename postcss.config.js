@@ -10,7 +10,7 @@ module.exports = {
              },
           }
         : {}),
-    'tailwindcss': {},
+    tailwindcss: {},
     autoprefixer: {},
   }
 }
