@@ -5,7 +5,7 @@ module.exports = {
         ? {
              '@fullhuman/postcss-purgecss': {
                 content: ["node_modules/react-responsive-carousel", "./pages/**/*.js", "./Componets/**/*.js"],
-                defaultExtractor: content =>
+                defaultExtractor: (content) =>
                    content.match(/[\w-/:]+(?<!:)/g) || [],
              },
           }
