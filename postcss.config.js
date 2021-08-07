@@ -4,7 +4,7 @@ module.exports = {
     ...(process.env.NODE_ENV === 'production'
         ? {
              '@fullhuman/postcss-purgecss': {
-                content: ["node_modules/react-responsive-carousel/lib/styles/carousel.min.css",
+                content: ["node_modules/react-responsive-carousel",
                  "./pages/**/*.js",
                   "./Componets/**/*.js"],
                 defaultExtractor: (content) =>
