@@ -7,8 +7,11 @@ module.exports = {
                 content: ["node_modules/react-responsive-carousel/lib/**/*.css",
                  "./pages/**/*.js",
                   "./Componets/**/*.js"],
-                defaultExtractor: (content) =>
-                   content.match(/[\w-/:]+(?<!:)/g) || [],
+                  defaultExtractor: content => {
+                    const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
+                    const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || []
+                    return broadMatches.concat(innerMatches)
+                  },
              },
           }
         : {}),
